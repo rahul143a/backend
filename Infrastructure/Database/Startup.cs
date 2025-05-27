@@ -29,6 +29,12 @@ public static class Startup
                 var databaseSettings = serviceProvider.GetRequiredService<IOptions<DatabaseSettings>>().Value;
                 var connectionString = string.IsNullOrEmpty(connection) ? databaseSettings.ConnectionString : connection;
 
+                // Fallback to static connection string if options pattern fails
+                if (string.IsNullOrEmpty(connectionString))
+                {
+                    connectionString = databaseSettings.ConnectionString;
+                }
+
                 // Apply EnableDynamicJson() properly
                 var dataSourceBuilder = new NpgsqlDataSourceBuilder(connectionString)
                     .EnableDynamicJson();
