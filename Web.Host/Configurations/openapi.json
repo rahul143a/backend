@@ -1,12 +1,12 @@
 {
   "SwaggerSettings": {
     "Enable": true,
-    "Title": "Inventory Management API",
+    "Title": "API",
     "Version": "v1",
-    "Description": "A comprehensive inventory management system API",
+    "Description": "A comprehensive system API",
     "ContactName": "Rahul N",
     "ContactEmail": "rahul.n@leadrat.com",
-    "ContactUrl": "https://inventorymanagement.com/support",
+    "ContactUrl": "https://app.com/support",
     "License": true,
     "LicenseName": "MIT License",
     "LicenseUrl": "https://opensource.org/licenses/MIT"

@@ -1,6 +1,6 @@
 {
   "DatabaseSettings": {
-    "ConnectionString": "Host=qa-lrb.postgres.database.azure.com;Port=5432;Database=inventoryManagement;Username=dbmasteruser;Password=8KvzkWW=e,N^XbYPL5}kLfuNoNyNGgBz",
+    "ConnectionString": "Host=qa-lrb.postgres.database.azure.com;Port=5432;Database=InventoryInstances;Username=dbmasteruser;Password=8KvzkWW=e,N^XbYPL5}kLfuNoNyNGgBz",
     "Provider": "PostgreSQL",
     "EnableAutoMigration": false,
     "EnableDetailedErrors": false,
