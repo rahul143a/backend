@@ -35,10 +35,6 @@ public class ApplicationDbContext : MultiTenantIdentityDbContext<ApplicationUser
         _currentUser = currentUser;
     }
 
-    /// <summary>
-    /// Tenants DbSet
-    /// </summary>
-    public DbSet<AppTenantInfo> Tenants => Set<AppTenantInfo>();
 
     /// <summary>
     /// Configure the model
