@@ -12,7 +12,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace Migrators.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20250527141703_InitialCreate")]
+    [Migration("20250527144351_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -212,62 +212,6 @@ namespace Migrators.Migrations
                     b.ToTable("Users", "Identity");
 
                     b.HasAnnotation("Finbuckle:MultiTenant", true);
-                });
-
-            modelBuilder.Entity("Domain.MultiTenancy.AppTenantInfo", b =>
-                {
-                    b.Property<string>("Id")
-                        .HasMaxLength(64)
-                        .HasColumnType("character varying(64)");
-
-                    b.Property<string>("AdminEmail")
-                        .IsRequired()
-                        .HasMaxLength(256)
-                        .HasColumnType("character varying(256)");
-
-                    b.Property<string>("ConnectionString")
-                        .HasMaxLength(512)
-                        .HasColumnType("character varying(512)");
-
-                    b.Property<string>("CreatedBy")
-                        .HasColumnType("text");
-
-                    b.Property<DateTime>("CreatedOn")
-                        .HasColumnType("timestamp with time zone");
-
-                    b.Property<string>("Identifier")
-                        .IsRequired()
-                        .HasMaxLength(64)
-                        .HasColumnType("character varying(64)");
-
-                    b.Property<bool>("IsActive")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("boolean")
-                        .HasDefaultValue(true);
-
-                    b.Property<string>("Issuer")
-                        .HasColumnType("text");
-
-                    b.Property<string>("LastModifiedBy")
-                        .HasColumnType("text");
-
-                    b.Property<DateTime?>("LastModifiedOn")
-                        .HasColumnType("timestamp with time zone");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasMaxLength(128)
-                        .HasColumnType("character varying(128)");
-
-                    b.PrimitiveCollection<string[]>("ResolutionKeys")
-                        .HasColumnType("text[]");
-
-                    b.Property<DateTime?>("ValidUpto")
-                        .HasColumnType("timestamp with time zone");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Tenants", "MultiTenancy");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

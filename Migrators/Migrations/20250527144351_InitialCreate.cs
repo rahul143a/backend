@@ -15,9 +15,6 @@ namespace Migrators.Migrations
             migrationBuilder.EnsureSchema(
                 name: "Identity");
 
-            migrationBuilder.EnsureSchema(
-                name: "MultiTenancy");
-
             migrationBuilder.CreateTable(
                 name: "Roles",
                 schema: "Identity",
@@ -40,30 +37,6 @@ namespace Migrators.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Roles", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "Tenants",
-                schema: "MultiTenancy",
-                columns: table => new
-                {
-                    Id = table.Column<string>(type: "character varying(64)", maxLength: 64, nullable: false),
-                    CreatedBy = table.Column<string>(type: "text", nullable: true),
-                    CreatedOn = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
-                    LastModifiedBy = table.Column<string>(type: "text", nullable: true),
-                    LastModifiedOn = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
-                    Identifier = table.Column<string>(type: "character varying(64)", maxLength: 64, nullable: false),
-                    Name = table.Column<string>(type: "character varying(128)", maxLength: 128, nullable: false),
-                    ConnectionString = table.Column<string>(type: "character varying(512)", maxLength: 512, nullable: true),
-                    AdminEmail = table.Column<string>(type: "character varying(256)", maxLength: 256, nullable: false),
-                    IsActive = table.Column<bool>(type: "boolean", nullable: false, defaultValue: true),
-                    ValidUpto = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
-                    Issuer = table.Column<string>(type: "text", nullable: true),
-                    ResolutionKeys = table.Column<string[]>(type: "text[]", nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Tenants", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -279,10 +252,6 @@ namespace Migrators.Migrations
             migrationBuilder.DropTable(
                 name: "RoleClaims",
                 schema: "Identity");
-
-            migrationBuilder.DropTable(
-                name: "Tenants",
-                schema: "MultiTenancy");
 
             migrationBuilder.DropTable(
                 name: "UserClaims",

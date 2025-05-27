@@ -49,6 +49,10 @@ public class ApplicationDbContext : MultiTenantIdentityDbContext<ApplicationUser
         // Apply entity configurations from assembly
         modelBuilder.ApplyConfigurationsFromAssembly(GetType().Assembly);
 
+        // Explicitly ignore AppTenantInfo entity in ApplicationDbContext
+        // The tenant information is managed separately in TenantDbContext
+        modelBuilder.Ignore<AppTenantInfo>();
+
         // Apply identity configuration
         modelBuilder.ApplyIdentityConfiguration();
     }
