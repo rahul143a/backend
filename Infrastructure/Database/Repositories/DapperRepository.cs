@@ -22,7 +22,7 @@ public class DapperRepository : IDapperRepository
     /// </summary>
     public DapperRepository(IOptions<DatabaseSettings> options)
     {
-        _connectionString = DatabaseSettings.ConnectionString;
+        _connectionString = options.Value.ConnectionString;
     }
 
     /// <summary>

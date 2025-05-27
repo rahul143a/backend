@@ -1,3 +1,5 @@
+using System.ComponentModel.DataAnnotations;
+
 namespace Domain.MultiTenancy;
 
 /// <summary>
@@ -6,23 +8,15 @@ namespace Domain.MultiTenancy;
 public class DatabaseSettings
 {
     /// <summary>
-    /// Static connection string for direct access
+    /// Database connection string
     /// </summary>
-    public static string ConnectionString { get; set; } = "Host=qa-lrb.postgres.database.azure.com;Port=5432;Database=inventoryManagement;Username=dbmasteruser;Password=8KvzkWW=e,N^XbYPL5}kLfuNoNyNGgBz";
-
-    /// <summary>
-    /// Static database provider
-    /// </summary>
-    public static string DBProvider { get; set; } = "PostgreSQL";
-
-    /// <summary>
-    /// Database connection string (instance property)
-    /// </summary>
-    public string ConnectionStr { get; set; } = string.Empty;
+    [Required]
+    public string ConnectionString { get; set; } = string.Empty;
 
     /// <summary>
     /// Database provider
     /// </summary>
+    [Required]
     public string Provider { get; set; } = "PostgreSQL";
 
     /// <summary>

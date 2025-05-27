@@ -1,8 +1,8 @@
 {
   "JwtSettings": {
     "Key": "S0M3RAN0MS3CR3T!1!MAG1C!1!S3CUR3K3Y!1!",
-    "Issuer": "Backend.QA",
-    "Audience": "Backend.QA.Client",
+    "Issuer": "App.QA",
+    "Audience": "App.QA.Client",
     "ExpirationInMinutes": 60,
     "RefreshTokenExpirationInDays": 7
   }

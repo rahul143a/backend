@@ -10,6 +10,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Options;
 using Microsoft.Extensions.Primitives;
 using Npgsql;
 using System;
@@ -32,8 +33,9 @@ public static class Startup
         return services
             .AddDbContext<TenantDbContext>((p, m) =>
             {
-                m.UseNpgsql(DatabaseSettings.ConnectionString,
-                    npgsql => npgsql.MigrationsAssembly("Inventory.Migrators"));
+                var databaseSettings = p.GetRequiredService<IOptions<DatabaseSettings>>().Value;
+                m.UseNpgsql(databaseSettings.ConnectionString,
+                    npgsql => npgsql.MigrationsAssembly("Migrators"));
             })
             .AddMultiTenant<AppTenantInfo>()
                 .WithHeaderStrategy(MultitenancyConstants.TenantIdName)
@@ -43,7 +45,9 @@ public static class Startup
                 .WithStaticStrategy(string.IsNullOrEmpty(tenantId) ? MultitenancyConstants.Root.Id : tenantId)
             .WithInMemoryStore(inMemoryConfig =>
             {
-                var tenants = GetAllTenantsInfo(DatabaseSettings.ConnectionString);
+                var serviceProvider = services.BuildServiceProvider();
+                var databaseSettings = serviceProvider.GetRequiredService<IOptions<DatabaseSettings>>().Value;
+                var tenants = GetAllTenantsInfo(databaseSettings.ConnectionString);
                 inMemoryConfig.Tenants = tenants;
             }).Services.AddScoped<ITenantService, TenantService>();
     }
@@ -56,8 +60,9 @@ public static class Startup
         return services
             .AddDbContext<TenantDbContext>((p, m) =>
             {
-                m.UseNpgsql(DatabaseSettings.ConnectionString,
-                    npgsql => npgsql.MigrationsAssembly("Inventory.Migrators"));
+                var databaseSettings = p.GetRequiredService<IOptions<DatabaseSettings>>().Value;
+                m.UseNpgsql(databaseSettings.ConnectionString,
+                    npgsql => npgsql.MigrationsAssembly("Migrators"));
             })
             .AddMultiTenant<AppTenantInfo>()
                 .WithHeaderStrategy(MultitenancyConstants.TenantIdName)
@@ -66,7 +71,9 @@ public static class Startup
                 .WithStaticStrategy(MultitenancyConstants.Root.Id)
             .WithInMemoryStore(inMemoryConfig =>
             {
-                var tenants = GetAllTenantsInfo(DatabaseSettings.ConnectionString);
+                var serviceProvider = services.BuildServiceProvider();
+                var databaseSettings = serviceProvider.GetRequiredService<IOptions<DatabaseSettings>>().Value;
+                var tenants = GetAllTenantsInfo(databaseSettings.ConnectionString);
                 inMemoryConfig.Tenants = tenants;
             }).Services;
     }

@@ -26,7 +26,8 @@ public static class Startup
                 var tenantInfoAccessor = serviceProvider.GetRequiredService<IMultiTenantContextAccessor<AppTenantInfo>>();
                 var connection = tenantInfoAccessor.MultiTenantContext?.TenantInfo?.ConnectionString;
 
-                var connectionString = string.IsNullOrEmpty(connection) ? DatabaseSettings.ConnectionString : connection;
+                var databaseSettings = serviceProvider.GetRequiredService<IOptions<DatabaseSettings>>().Value;
+                var connectionString = string.IsNullOrEmpty(connection) ? databaseSettings.ConnectionString : connection;
 
                 // Apply EnableDynamicJson() properly
                 var dataSourceBuilder = new NpgsqlDataSourceBuilder(connectionString)
@@ -36,8 +37,18 @@ public static class Startup
                 // Use the dataSource properly
                 options.UseNpgsql(dataSource, dbOptions =>
                 {
-                    dbOptions.MigrationsAssembly("Inventory.Migrators");
+                    dbOptions.MigrationsAssembly("Migrators");
                 });
+
+                if (databaseSettings.EnableDetailedErrors)
+                {
+                    options.EnableDetailedErrors();
+                }
+
+                if (databaseSettings.EnableSensitiveDataLogging)
+                {
+                    options.EnableSensitiveDataLogging();
+                }
             }, ServiceLifetime.Scoped)
             .AddScoped<IDatabaseInitializer, DatabaseInitializer>()
             .AddRepositories();
@@ -66,7 +77,7 @@ public static class Startup
         {
             case "postgresql":
                 return builder.UseNpgsql(connectionString, e =>
-                     e.MigrationsAssembly("Inventory.Migrators"));
+                     e.MigrationsAssembly("Migrators"));
 
             default:
                 throw new InvalidOperationException($"DB Provider {dbProvider} is not supported.");

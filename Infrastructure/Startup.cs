@@ -1,4 +1,5 @@
 using Abstraction.Common;
+using Domain.MultiTenancy;
 using Infrastructure.Common;
 using Infrastructure.Database;
 using Infrastructure.Extensions;
@@ -25,6 +26,12 @@ public static class Startup
     /// </summary>
     public static IServiceCollection AddInfrastructure(this IServiceCollection services, IConfiguration config, string tenantId)
     {
+        // Configure database settings with Options pattern
+        services.AddOptions<DatabaseSettings>()
+            .BindConfiguration(nameof(DatabaseSettings))
+            .ValidateDataAnnotations()
+            .ValidateOnStart();
+
         return services
             .AddHttpContextAccessor()
             .AddScoped<ICurrentUser, CurrentUser>()
@@ -45,6 +52,12 @@ public static class Startup
     /// </summary>
     public static IServiceCollection AddInfrastructureForMeta(this IServiceCollection services, IConfiguration config)
     {
+        // Configure database settings with Options pattern
+        services.AddOptions<DatabaseSettings>()
+            .BindConfiguration(nameof(DatabaseSettings))
+            .ValidateDataAnnotations()
+            .ValidateOnStart();
+
         return services
             .AddHttpContextAccessor()
             .AddVersioning()

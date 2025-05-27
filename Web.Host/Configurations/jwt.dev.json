@@ -1,8 +1,8 @@
 {
   "JwtSettings": {
     "Key": "S0M3RAN0MS3CR3T!1!MAG1C!1!DEV_ENVIRONMENT_KEY",
-    "Issuer": "Inventory.Dev",
-    "Audience": "Inventory.Dev.Client",
+    "Issuer": "App.Dev",
+    "Audience": "App.Dev.Client",
     "ExpirationInMinutes": 120,
     "RefreshTokenExpirationInDays": 14
   }
