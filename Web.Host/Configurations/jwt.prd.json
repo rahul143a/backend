@@ -1,0 +1,9 @@
+{
+  "JwtSettings": {
+    "Key": "S0M3RAN0MS3CR3T!1!MAG1C!1!S3CUR3K3Y!1!",
+    "Issuer": "Inventory",
+    "Audience": "Inventory.Client",
+    "ExpirationInMinutes": 30,
+    "RefreshTokenExpirationInDays": 7
+  }
+}

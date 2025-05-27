@@ -1,0 +1,277 @@
+{
+  "Succeeded": true,
+  "Message": null,
+  "Data": null,
+  "Errors": null,
+  "Items": [
+    {
+      "FieldValues": [],
+      "GroupValues": [
+        {
+          "Id": "13b77cbb-53c0-4f0f-bb21-a33f00c2b9ce",
+          "ModuleDataId": "7fb84cf2-97f9-4966-aaf8-bb5fafcba976",
+          "FieldGroupId": "a5e02d9f-5955-4286-bc38-ed2825e72a16",
+          "FieldGroupName": "Building",
+          "ParentGroupValueId": null,
+          "ChildGroupValues": [
+            {
+              "Id": "3e161d5d-dacd-4a67-855c-9673f2ab6ed5",
+              "ModuleDataId": "7fb84cf2-97f9-4966-aaf8-bb5fafcba976",
+              "FieldGroupId": "9f8b9d47-9c20-47b7-a75e-f8262bd0490a",
+              "FieldGroupName": "Floor",
+              "ParentGroupValueId": "13b77cbb-53c0-4f0f-bb21-a33f00c2b9ce",
+              "ChildGroupValues": [
+                {
+                  "Id": "4c6eb022-c9d0-4fd4-847b-1e6c802b58a9",
+                  "ModuleDataId": "7fb84cf2-97f9-4966-aaf8-bb5fafcba976",
+                  "FieldGroupId": "ead95d98-e37e-4a8a-be8d-a96515e3e5ba",
+                  "FieldGroupName": "Apartment",
+                  "ParentGroupValueId": "3e161d5d-dacd-4a67-855c-9673f2ab6ed5",
+                  "ChildGroupValues": [
+                    {
+                      "Id": "3091aeb5-c2f8-4488-9f10-d90c0bd0d0ec",
+                      "ModuleDataId": "7fb84cf2-97f9-4966-aaf8-bb5fafcba976",
+                      "FieldGroupId": "1420c977-787d-4131-8384-d64bde6c22d5",
+                      "FieldGroupName": "Tenant",
+                      "ParentGroupValueId": "4c6eb022-c9d0-4fd4-847b-1e6c802b58a9",
+                      "ChildGroupValues": [],
+                      "FieldValues": [
+                        {
+                          "Id": "0c5de967-b102-4baf-b7ac-c9a79b4d5ab6",
+                          "ModuleDataId": "7fb84cf2-97f9-4966-aaf8-bb5fafcba976",
+                          "FieldConfigId": "4630c24a-67c1-49f9-b3c2-f108e47fed79",
+                          "GroupValueId": "3091aeb5-c2f8-4488-9f10-d90c0bd0d0ec",
+                          "Value": "TNT-001"
+                        },
+                        {
+                          "Id": "ee4710ad-bcb3-4949-8469-f9aa37126907",
+                          "ModuleDataId": "7fb84cf2-97f9-4966-aaf8-bb5fafcba976",
+                          "FieldConfigId": "fa2063b7-e9c0-4324-81a1-8d2491f28211",
+                          "GroupValueId": "3091aeb5-c2f8-4488-9f10-d90c0bd0d0ec",
+                          "Value": "John"
+                        },
+                        {
+                          "Id": "a9ae729f-d51c-455e-b74c-bdd67ec5ad45",
+                          "ModuleDataId": "7fb84cf2-97f9-4966-aaf8-bb5fafcba976",
+                          "FieldConfigId": "9f0b5154-72cb-45c4-823c-a127a15f9c10",
+                          "GroupValueId": "3091aeb5-c2f8-4488-9f10-d90c0bd0d0ec",
+                          "Value": "Smith"
+                        },
+                        {
+                          "Id": "0674495c-f1fc-4317-a930-d7514e6e0309",
+                          "ModuleDataId": "7fb84cf2-97f9-4966-aaf8-bb5fafcba976",
+                          "FieldConfigId": "a93f536d-58d2-448c-ae96-19bd500a4536",
+                          "GroupValueId": "3091aeb5-c2f8-4488-9f10-d90c0bd0d0ec",
+                          "Value": "APT-101"
+                        }
+                      ]
+                    }
+                  ],
+                  "FieldValues": [
+                    {
+                      "Id": "4726c25d-e6b4-48b5-9475-9d222795cdba",
+                      "ModuleDataId": "7fb84cf2-97f9-4966-aaf8-bb5fafcba976",
+                      "FieldConfigId": "c98e9260-9d0a-4166-80e0-00b6f5915ea5",
+                      "GroupValueId": "4c6eb022-c9d0-4fd4-847b-1e6c802b58a9",
+                      "Value": "APT-101"
+                    },
+                    {
+                      "Id": "659cabed-eac1-44d8-ac54-f022172775ba",
+                      "ModuleDataId": "7fb84cf2-97f9-4966-aaf8-bb5fafcba976",
+                      "FieldConfigId": "b678b1a8-05d3-4c67-87f0-b76af1c2b978",
+                      "GroupValueId": "4c6eb022-c9d0-4fd4-847b-1e6c802b58a9",
+                      "Value": "101"
+                    },
+                    {
+                      "Id": "0133174a-e243-48da-b510-4ce8bd1b78db",
+                      "ModuleDataId": "7fb84cf2-97f9-4966-aaf8-bb5fafcba976",
+                      "FieldConfigId": "3bdeebaf-9c52-4ff9-b6be-cf5b9ad4c4de",
+                      "GroupValueId": "4c6eb022-c9d0-4fd4-847b-1e6c802b58a9",
+                      "Value": "2BR"
+                    },
+                    {
+                      "Id": "718b6a0f-2cbf-4561-92c3-5f25a4a64377",
+                      "ModuleDataId": "7fb84cf2-97f9-4966-aaf8-bb5fafcba976",
+                      "FieldConfigId": "27b4e39d-9969-409b-b493-3e364bae1eee",
+                      "GroupValueId": "4c6eb022-c9d0-4fd4-847b-1e6c802b58a9",
+                      "Value": "FL-001"
+                    }
+                  ]
+                },
+                {
+                  "Id": "5d7eb022-c9d0-4fd4-847b-1e6c802b58a9",
+                  "ModuleDataId": "7fb84cf2-97f9-4966-aaf8-bb5fafcba976",
+                  "FieldGroupId": "ead95d98-e37e-4a8a-be8d-a96515e3e5ba",
+                  "FieldGroupName": "Apartment",
+                  "ParentGroupValueId": "3e161d5d-dacd-4a67-855c-9673f2ab6ed5",
+                  "ChildGroupValues": [],
+                  "FieldValues": [
+                    {
+                      "Id": "5726c25d-e6b4-48b5-9475-9d222795cdba",
+                      "ModuleDataId": "7fb84cf2-97f9-4966-aaf8-bb5fafcba976",
+                      "FieldConfigId": "c98e9260-9d0a-4166-80e0-00b6f5915ea5",
+                      "GroupValueId": "5d7eb022-c9d0-4fd4-847b-1e6c802b58a9",
+                      "Value": "APT-102"
+                    },
+                    {
+                      "Id": "759cabed-eac1-44d8-ac54-f022172775ba",
+                      "ModuleDataId": "7fb84cf2-97f9-4966-aaf8-bb5fafcba976",
+                      "FieldConfigId": "b678b1a8-05d3-4c67-87f0-b76af1c2b978",
+                      "GroupValueId": "5d7eb022-c9d0-4fd4-847b-1e6c802b58a9",
+                      "Value": "102"
+                    },
+                    {
+                      "Id": "1133174a-e243-48da-b510-4ce8bd1b78db",
+                      "ModuleDataId": "7fb84cf2-97f9-4966-aaf8-bb5fafcba976",
+                      "FieldConfigId": "3bdeebaf-9c52-4ff9-b6be-cf5b9ad4c4de",
+                      "GroupValueId": "5d7eb022-c9d0-4fd4-847b-1e6c802b58a9",
+                      "Value": "1BR"
+                    },
+                    {
+                      "Id": "818b6a0f-2cbf-4561-92c3-5f25a4a64377",
+                      "ModuleDataId": "7fb84cf2-97f9-4966-aaf8-bb5fafcba976",
+                      "FieldConfigId": "27b4e39d-9969-409b-b493-3e364bae1eee",
+                      "GroupValueId": "5d7eb022-c9d0-4fd4-847b-1e6c802b58a9",
+                      "Value": "FL-001"
+                    }
+                  ]
+                }
+              ],
+              "FieldValues": [
+                {
+                  "Id": "d4b559ab-5ade-4a82-a565-a674d1b48670",
+                  "ModuleDataId": "7fb84cf2-97f9-4966-aaf8-bb5fafcba976",
+                  "FieldConfigId": "9c2dd374-847a-42cc-8bfd-33627f07f1b3",
+                  "GroupValueId": "3e161d5d-dacd-4a67-855c-9673f2ab6ed5",
+                  "Value": "FL-001"
+                },
+                {
+                  "Id": "e298a5cb-b540-4fb8-9177-d338d76f4df7",
+                  "ModuleDataId": "7fb84cf2-97f9-4966-aaf8-bb5fafcba976",
+                  "FieldConfigId": "00b20c09-ad66-47d3-a6da-d4a9e741f52a",
+                  "GroupValueId": "3e161d5d-dacd-4a67-855c-9673f2ab6ed5",
+                  "Value": 1
+                },
+                {
+                  "Id": "867d9c43-ec41-46c5-a923-e34efa468031",
+                  "ModuleDataId": "7fb84cf2-97f9-4966-aaf8-bb5fafcba976",
+                  "FieldConfigId": "87c5baac-a396-4369-aa52-f5ff99ccbf17",
+                  "GroupValueId": "3e161d5d-dacd-4a67-855c-9673f2ab6ed5",
+                  "Value": "BLDG-001"
+                }
+              ]
+            },
+            {
+              "Id": "4f161d5d-dacd-4a67-855c-9673f2ab6ed5",
+              "ModuleDataId": "7fb84cf2-97f9-4966-aaf8-bb5fafcba976",
+              "FieldGroupId": "9f8b9d47-9c20-47b7-a75e-f8262bd0490a",
+              "FieldGroupName": "Floor",
+              "ParentGroupValueId": "13b77cbb-53c0-4f0f-bb21-a33f00c2b9ce",
+              "ChildGroupValues": [
+                {
+                  "Id": "6c6eb022-c9d0-4fd4-847b-1e6c802b58a9",
+                  "ModuleDataId": "7fb84cf2-97f9-4966-aaf8-bb5fafcba976",
+                  "FieldGroupId": "ead95d98-e37e-4a8a-be8d-a96515e3e5ba",
+                  "FieldGroupName": "Apartment",
+                  "ParentGroupValueId": "4f161d5d-dacd-4a67-855c-9673f2ab6ed5",
+                  "ChildGroupValues": [],
+                  "FieldValues": [
+                    {
+                      "Id": "6726c25d-e6b4-48b5-9475-9d222795cdba",
+                      "ModuleDataId": "7fb84cf2-97f9-4966-aaf8-bb5fafcba976",
+                      "FieldConfigId": "c98e9260-9d0a-4166-80e0-00b6f5915ea5",
+                      "GroupValueId": "6c6eb022-c9d0-4fd4-847b-1e6c802b58a9",
+                      "Value": "APT-201"
+                    },
+                    {
+                      "Id": "859cabed-eac1-44d8-ac54-f022172775ba",
+                      "ModuleDataId": "7fb84cf2-97f9-4966-aaf8-bb5fafcba976",
+                      "FieldConfigId": "b678b1a8-05d3-4c67-87f0-b76af1c2b978",
+                      "GroupValueId": "6c6eb022-c9d0-4fd4-847b-1e6c802b58a9",
+                      "Value": "201"
+                    },
+                    {
+                      "Id": "2133174a-e243-48da-b510-4ce8bd1b78db",
+                      "ModuleDataId": "7fb84cf2-97f9-4966-aaf8-bb5fafcba976",
+                      "FieldConfigId": "3bdeebaf-9c52-4ff9-b6be-cf5b9ad4c4de",
+                      "GroupValueId": "6c6eb022-c9d0-4fd4-847b-1e6c802b58a9",
+                      "Value": "3BR"
+                    },
+                    {
+                      "Id": "918b6a0f-2cbf-4561-92c3-5f25a4a64377",
+                      "ModuleDataId": "7fb84cf2-97f9-4966-aaf8-bb5fafcba976",
+                      "FieldConfigId": "27b4e39d-9969-409b-b493-3e364bae1eee",
+                      "GroupValueId": "6c6eb022-c9d0-4fd4-847b-1e6c802b58a9",
+                      "Value": "FL-002"
+                    }
+                  ]
+                }
+              ],
+              "FieldValues": [
+                {
+                  "Id": "e4b559ab-5ade-4a82-a565-a674d1b48670",
+                  "ModuleDataId": "7fb84cf2-97f9-4966-aaf8-bb5fafcba976",
+                  "FieldConfigId": "9c2dd374-847a-42cc-8bfd-33627f07f1b3",
+                  "GroupValueId": "4f161d5d-dacd-4a67-855c-9673f2ab6ed5",
+                  "Value": "FL-002"
+                },
+                {
+                  "Id": "f298a5cb-b540-4fb8-9177-d338d76f4df7",
+                  "ModuleDataId": "7fb84cf2-97f9-4966-aaf8-bb5fafcba976",
+                  "FieldConfigId": "00b20c09-ad66-47d3-a6da-d4a9e741f52a",
+                  "GroupValueId": "4f161d5d-dacd-4a67-855c-9673f2ab6ed5",
+                  "Value": 2
+                },
+                {
+                  "Id": "967d9c43-ec41-46c5-a923-e34efa468031",
+                  "ModuleDataId": "7fb84cf2-97f9-4966-aaf8-bb5fafcba976",
+                  "FieldConfigId": "87c5baac-a396-4369-aa52-f5ff99ccbf17",
+                  "GroupValueId": "4f161d5d-dacd-4a67-855c-9673f2ab6ed5",
+                  "Value": "BLDG-001"
+                }
+              ]
+            }
+          ],
+          "FieldValues": [
+            {
+              "Id": "f9e4b7ad-1821-4a41-af7b-88007091c23c",
+              "ModuleDataId": "7fb84cf2-97f9-4966-aaf8-bb5fafcba976",
+              "FieldConfigId": "28c8c55c-38ce-4a7e-b595-7c879afbbfb4",
+              "GroupValueId": "13b77cbb-53c0-4f0f-bb21-a33f00c2b9ce",
+              "Value": "BLDG-001"
+            },
+            {
+              "Id": "0564bd1e-28e3-4e18-ba3e-76ffa750af93",
+              "ModuleDataId": "7fb84cf2-97f9-4966-aaf8-bb5fafcba976",
+              "FieldConfigId": "51b0330d-3dc8-47c7-b1e2-004b0452ac1c",
+              "GroupValueId": "13b77cbb-53c0-4f0f-bb21-a33f00c2b9ce",
+              "Value": "Sunset Towers"
+            },
+            {
+              "Id": "8729c97d-e671-4c04-88cc-f843ecccd752",
+              "ModuleDataId": "7fb84cf2-97f9-4966-aaf8-bb5fafcba976",
+              "FieldConfigId": "c41d9a1e-fa58-4938-9af9-723eb15163a2",
+              "GroupValueId": "13b77cbb-53c0-4f0f-bb21-a33f00c2b9ce",
+              "Value": "ST-001"
+            },
+            {
+              "Id": "0718d9ba-3b9a-42cd-8757-90136b22c6fd",
+              "ModuleDataId": "7fb84cf2-97f9-4966-aaf8-bb5fafcba976",
+              "FieldConfigId": "f44fefd7-c8ca-44d4-8356-4984870ef7ee",
+              "GroupValueId": "13b77cbb-53c0-4f0f-bb21-a33f00c2b9ce",
+              "Value": "Luxury apartment building with modern amenities"
+            }
+          ]
+        }
+      ],
+      "Id": "7fb84cf2-97f9-4966-aaf8-bb5fafcba976",
+      "ModuleConfigId": "d1f2ec06-0ad0-43d6-a016-9396d85c914b",
+      "ModuleConfigName": "Apartment Inventory Management",
+      "CreatedOn": "2025-05-19T02:06:10.912644Z",
+      "LastModifiedOn": "2025-05-19T02:06:10.911414Z"
+    }
+  ],
+  "ItemsCount": 1,
+  "TotalCount": 1,
+  "StatusCode": 200
+}
