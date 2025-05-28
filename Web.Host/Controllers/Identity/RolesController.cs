@@ -3,6 +3,7 @@ using Abstraction.Identity.Dtos;
 using Shared.Common.Response;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Infrastructure.OpenApi;
 
 namespace Web.Host.Controllers.Identity;
 
@@ -29,6 +30,7 @@ public class RolesController : BaseApiController
     /// Get all roles
     /// </summary>
     [HttpGet]
+    [TenantIdHeader]
     public async Task<ActionResult<Result<List<RoleDto>>>> GetAllAsync()
     {
         try
@@ -46,6 +48,7 @@ public class RolesController : BaseApiController
     /// Get a role by ID
     /// </summary>
     [HttpGet("{id}")]
+    [TenantIdHeader]
     public async Task<ActionResult<Result<RoleDto>>> GetByIdAsync(string id)
     {
         try
@@ -68,6 +71,7 @@ public class RolesController : BaseApiController
     /// Create a new role
     /// </summary>
     [HttpPost]
+    [TenantIdHeader]
     public async Task<ActionResult<Result<string>>> CreateAsync(CreateRoleRequest request)
     {
         try
@@ -85,6 +89,7 @@ public class RolesController : BaseApiController
     /// Update a role
     /// </summary>
     [HttpPut]
+    [TenantIdHeader]
     public async Task<ActionResult<Result<string>>> UpdateAsync(UpdateRoleRequest request)
     {
         try
@@ -102,6 +107,7 @@ public class RolesController : BaseApiController
     /// Delete a role
     /// </summary>
     [HttpDelete("{id}")]
+    [TenantIdHeader]
     public async Task<ActionResult<Result<string>>> DeleteAsync(string id)
     {
         try
